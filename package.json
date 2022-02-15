@@ -1,0 +1,20 @@
+{
+  "name": "learn-code-work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherLawn/learn-code-work.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherLawn/learn-code-work/issues"
+  },
+  "homepage": "https://github.com/ChristopherLawn/learn-code-work#readme"
+}
