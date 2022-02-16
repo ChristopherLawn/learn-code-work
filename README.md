@@ -17,6 +17,6 @@ A website for emerging developers to continue preporation and have access to wor
 https://github.com/ChristopherLawn/learn-code-work
 
 ## Contribution
-Made by Chris, Christian, David, Juan
+Made by Chris, Christopher, David, Juan
 
 ### February 15, 2022
