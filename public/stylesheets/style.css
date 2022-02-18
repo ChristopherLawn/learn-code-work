@@ -1,0 +1,28 @@
+/* Primary/Default */
+
+:root {
+    --primary-color: #4E5D66;
+    --primary-color-hover: #647783;
+    --orange-accent: #FE8C4F;
+    --green-accent: #7BAD56;
+    --blue-accent: #003459;
+}
+
+/* Header Classes */
+
+.mdl-layout__header {
+    background-color:white;
+    border-bottom: 3px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+    color: var(--primary-color);
+}
+
+/* Body Classes */
+
+.dashboard-content {
+    max-width: 1440px;
+}
+
