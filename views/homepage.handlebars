@@ -1,0 +1,25 @@
+<section>
+    <h1>Scripting Languages</h1>
+    <ol class="module-cards-list">
+        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
+        {{#each scriptingModules as |scriptingModule|}}
+        <li>
+            {{!-- link to views/module-card.handlebars with a module object --}}
+            {{> module-card scriptingModule}}
+        </li> 
+        {{/each}}
+    </ol>
+</section>
+
+<section>
+    <h1>Programming Languages</h1>
+    <ol class="module-cards-list">
+        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
+        {{#each programmingModules as |programmingModule|}}
+        <li>
+            {{!-- link to views/module-card.handlebars with a module object --}}
+            {{> module-card programmingModule}}
+        </li> 
+        {{/each}}
+    </ol>
+</section>
