@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // View engines
 // app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
+app.set('view engine', 'handlebars');
 
 // Turn on routes
 app.use(routes);
