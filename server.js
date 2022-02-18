@@ -32,10 +32,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({});
 
 // View engines
-// app.engine('handlebars', hbs.engine);
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // Turn on routes
