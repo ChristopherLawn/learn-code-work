@@ -22,6 +22,17 @@
 
 /* Body Classes */
 
+.language-section{
+    text-align:center;
+}
+
+.section-text {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px 16px 0 16px;
+}
+
 .dashboard-content {
     max-width: 1440px;
 }
