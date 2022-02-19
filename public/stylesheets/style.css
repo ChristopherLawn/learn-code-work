@@ -16,15 +16,16 @@
     color: var(--primary-color);
 }
 
+.mdl-layout-title a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 .mdl-layout__header-row .mdl-navigation__link {
     color: var(--primary-color);
 }
 
 /* Body Classes */
-
-.language-section{
-    text-align:center;
-}
 
 .section-text {
     max-width: 500px;
@@ -37,3 +38,35 @@
     max-width: 1440px;
 }
 
+/* Main Page */
+
+.page-header-banner{
+    display: flex;
+    background-color: var(--orange-accent);
+    justify-content: center;
+}
+
+.language-section{
+    text-align: center;
+}
+
+.module-cards-list {
+    display:flex;
+    justify-content: center;
+}
+
+.mdl-card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.mdl-card h2 {
+    position:absolute;
+    bottom: 25px;
+}
+
+footer{
+    margin-top: 60px;
+}
