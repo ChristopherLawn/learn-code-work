@@ -36,6 +36,7 @@
 .banner-text{
     color:var(--primary-color)
 }
+
 .section-text {
     max-width: 500px;
     margin-left: auto;
@@ -47,6 +48,6 @@
     max-width: 1440px;
 }
 
-footer {
+footer{
     margin-top: 60px;
 }
