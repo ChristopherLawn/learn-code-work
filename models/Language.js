@@ -41,11 +41,8 @@ Language.init(
             }
         },
         description: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
+            type: DataTypes.TEXT,
+            allowNull: false
         },
         developed_by: {
             type: DataTypes.STRING,

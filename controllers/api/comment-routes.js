@@ -6,9 +6,10 @@ const { Comment } = require('../../models');
 router.post('/', (req, res) => {
     if (req.session) {
         Comment.create({
-            ...req.body,
+            // ...req.body,
             user_id: req.session.user_id,
-            language_id: req.body.language_id
+            language_id: req.body.language_id,
+            comment_text: req.body.comment_text
         })
             .then(dbCommentData => res.json(dbCommentData))
             .catch(err => {
