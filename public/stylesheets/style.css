@@ -27,6 +27,15 @@
 
 /* Body Classes */
 
+.page-header-banner{
+    display: flex;
+    background-color: var(--orange-accent);
+    justify-content: center;
+}
+
+.banner-text{
+    color:var(--primary-color)
+}
 .section-text {
     max-width: 500px;
     margin-left: auto;
@@ -38,50 +47,6 @@
     max-width: 1440px;
 }
 
-/* Main Page */
-
-.page-header-banner{
-    display: flex;
-    background-color: var(--orange-accent);
-    justify-content: center;
-}
-
-.language-section{
-    text-align: center;
-}
-
-.module-cards-list {
-    display:flex;
-    justify-content: center;
-}
-
-.mdl-card {
-    display: flex;
-    justify-content: center;
-    position: relative;
-
-}
-
-.mdl-card h2 {
-    position:absolute;
-    bottom: 25px;
-}
-
-footer{
+footer {
     margin-top: 60px;
-}
-
-/* sign up / sign in */
-
-.forms-container{
-    display: flex;
-    justify-content: space-around;
-}
-
-form label{
-    display: block;
-}
-
-form > div {
-    margin-bottom: 2%;
 }

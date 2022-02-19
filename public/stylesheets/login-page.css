@@ -1,0 +1,30 @@
+main{
+    height: 100%;
+  
+}
+
+.forms-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+form{
+    margin: 20px 50px;
+}
+
+form label{
+    display: block;
+    font-size: 20px;
+    height: 20px;
+}
+
+button:hover{
+    color:var(--primary-color-hover)
+}
+
+/* 
+form > div {
+    margin-bottom: 2%;
+} */
+
