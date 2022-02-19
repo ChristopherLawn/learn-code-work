@@ -12,13 +12,15 @@
         <link rel="stylesheet" href="/stylesheets/style.css" />
     
         <title>LEARN IT</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     </head>
 <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
               <!-- Title -->
-                <span class="mdl-layout-title"><a href="/">Learn it - Code it - Work it</a></span>
+                <i class="fas fa-laptop-code"></i>
+                <span class="mdl-layout-title"><a href="/" class="mdl-typography--font-light mdl-typography">LEARN IT</a></span>
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation -->
@@ -26,7 +28,7 @@
                     {{#if loggedIn}}
                     <a class="mdl-navigation__link" href="">Logout</a>
                     {{else}}
-                    <a class="mdl-navigation__link" href=""/login"">LOGIN</a>
+                    <a class="mdl-navigation__link mdl-typography--font-light mdl-typography" href="/login">LOGIN</a>
                     {{/if}}         
                 </nav>
             </div>
@@ -38,7 +40,7 @@
 
      <footer class="mdl-mini-footer">
       <div class="mdl-mini-footer__left-section">
-        <div class="mdl-logo">Created by team 1</div>
+        <div class="mdl-logo">© Team 1, Inc.</div>
       </div>
     </footer>
   </div>
