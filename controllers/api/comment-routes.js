@@ -7,7 +7,8 @@ router.post('/', (req, res) => {
     if (req.session) {
         Comment.create({
             ...req.body,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            language_id: req.body.language_id
         })
             .then(dbCommentData => res.json(dbCommentData))
             .catch(err => {
