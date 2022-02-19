@@ -1,4 +1,4 @@
-<section>
+<!---<section>
     <h1>Scripting Languages</h1>
     <ol class="module-cards-list">
         {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
@@ -22,40 +22,51 @@
         </li> 
         {{/each}}
     </ol>
-</section>
+</section> --->
+
+{{!-- banner/"hero" --}}
+<div class="page-header-banner">
+    <img src="/images/placeholder-image-person-jpg.jpeg" alt="" width="200">
+</div>
 
 <section class="language-section">
     <div class="section-text">
         <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Scripting Languages</div>
     </div>
-    <div class="mdl-grid module-cards-list">
+    <ol class="mdl-grid module-cards-list">
+
         {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
         {{#each scriptingModules as |scriptingModule|}}
             {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> module-card}}
+            {{> module-card scriptingModule}}
         {{/each}}
-        <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--1-col mdl-grid">
-            <div class="mdl-card_media">
-                <i class="fab fa-html5"></i>
-            </div>
-            <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">HTML 5</h2>
-            </div>
 
-        </div>
-        <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--1-col mdl-grid">
-            <div class="mdl-card__title">
+        {{!-- testing card handlerbars file --}}
+        {{> module-card}}
+
+        {{!-- testing with hardcoded element --}}
+        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
+            <i class="fab fa-css3 fa-6x"></i>
+                <h2 class="mdl-card__title-text">CSS</h2>
+        </li>
+        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
+            <i class="fab fa-css3 fa-6x"></i>
                 <h2 class="mdl-card__title-text">Javascript</h2>
-            </div>
-        </div>
-    </div>
+        </li>
+        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
+            <i class="fab fa-css3 fa-6x"></i>
+                <h2 class="mdl-card__title-text">React</h2>
+        </li>
+
+    </ol>
 </section>
 
 <section class="language-section">
     <div class="section-text">
         <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Programming Languages</div>
     </div>
-    <ol class="module-cards-list">
+    <ol class="mdl-grid module-cards-list">
+
         {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
         {{#each programmingModules as |programmingModule|}}
         <li>
@@ -63,5 +74,19 @@
             {{> module-card programmingModule}}
         </li> 
         {{/each}}
+
+        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
+            <i class="fab fa-css3 fa-6x"></i>
+                <h2 class="mdl-card__title-text">CSS</h2>
+        </li>
+        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
+            <i class="fab fa-css3 fa-6x"></i>
+                <h2 class="mdl-card__title-text">Javascript</h2>
+        </li>
+        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
+            <i class="fab fa-css3 fa-6x"></i>
+                <h2 class="mdl-card__title-text">React</h2>
+        </li>
+
     </ol>
 </section>
