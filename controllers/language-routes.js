@@ -14,10 +14,10 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:name', (req, res) => {
     Language.findOne({
         where: {
-            id: req.params.id
+            name: req.params.name
         },
         attributes: [
             'id',
