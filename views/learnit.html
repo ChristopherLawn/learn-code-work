@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://kit.fontawesome.com/0af195136d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="../public/stylesheets/style.css" />
+    
+        <title>LEARN IT</title>
+    </head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+                <span class="mdl-layout-title"><a href="/">Learn it - Code it - Work it</a></span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    {{#if loggedIn}}
+                    <a class="mdl-navigation__link" href="">Logout</a>
+                    {{else}}
+                    <a class="mdl-navigation__link" href=""/login"">LOGIN</a>
+                    {{/if}}         
+                </nav>
+            </div>
+        </header>
+    <main>
+        <section class="header-section">
+            <div class="page-header-banner">
+                <div class="page-header-banner__title">
+                    <div class="mdl-typography--display-2 mdl-typography--font-thin">Learn It</div>
+                </div> 
+            </div>
+        </section>
+        <section class="mdl-grid page-content">
+            <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--9-col mdl-grid">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">JavaScript</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Javascript (JS) is a scripting languages, primarily used on the Web. It is used to enhance HTML pages and is commonly found embedded in HTML code. JavaScript is an interpreted language. Thus, it doesn't need to be compiled. JavaScript renders web pages in an interactive and dynamic fashion. This allowing the pages to react to events, exhibit special effects, accept variable text, validate data, create cookies, detect a user’s browser, etc.
+                </div>
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__subtitle-text">Major Organizations</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    WordPress, Soundcloud, Khan Academy, Linkedin, Groupon, Yahoo
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">Website<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+                </div>
+            </div>
+            <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-grid">
+                <ul class='mdl-list'>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            Developed by: Brendan Eich
+                        </span>
+                    </li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            Year Created: 1995
+                        </span>
+                    </li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            Version Number: ECMAScript 2021
+                        </span>
+                    </li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            Filename Extension: <span class="mdl-chip">
+                                <span class="mdl-chip__text">.js</span>
+                            </span>
+                        </span>
+                    </li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                           Licensed Under: GPL
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <article class="mdl-grid page-content comment-content">
+            <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+                <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+                    <form class="comment-form">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <textarea rows=1 class="mdl-textfield__input" id="comment-body"></textarea>
+                        <label for="comment-body" class="mdl-textfield__label">Join the discussion</label>
+                      </div>
+                      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                        <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add comment</span>
+                      </button>
+                    </form>
+                    <div class="comments mdl-color-text--grey-700">
+                      <header class="comment__header">
+                        <div class="comment__author">
+                          <strong>James Splayd</strong>
+                          <span>2 days ago</span>
+                        </div>
+                      </header>
+                      <div class="comment__text">
+                        In in culpa nulla elit esse. Ex cillum enim aliquip sit sit ullamco ex eiusmod fugiat. Cupidatat ad minim officia mollit laborum magna dolor tempor cupidatat mollit. Est velit sit ad aliqua ullamco laborum excepteur dolore proident incididunt in labore elit.
+                      </div>
+                      <nav class="comment__actions">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                          <i class="material-icons" role="presentation">thumb_up</i><span class="visuallyhidden">like comment</span>
+                        </button>
+                      </nav>
+                    </div>
+                    <div class="comments mdl-color-text--grey-700">
+                        <header class="comment__header">
+                          <div class="comment__author">
+                            <strong>James Splayd</strong>
+                            <span>2 days ago</span>
+                          </div>
+                        </header>
+                        <div class="comment__text">
+                          In in culpa nulla elit esse. Ex cillum enim aliquip sit sit ullamco ex eiusmod fugiat. Cupidatat ad minim officia mollit laborum magna dolor tempor cupidatat mollit. Est velit sit ad aliqua ullamco laborum excepteur dolore proident incididunt in labore elit.
+                        </div>
+                        <nav class="comment__actions">
+                          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <i class="material-icons" role="presentation">thumb_up</i><span class="visuallyhidden">like comment</span>
+                          </button>
+                        </nav>
+                      </div>
+                </div>
+            </div>
+        </article>
+        
+    </main>
+
+     <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">Created by team 1</div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

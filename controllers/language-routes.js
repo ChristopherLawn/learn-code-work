@@ -48,7 +48,12 @@ router.get('/:name', (req, res) => {
                 res.status(404).json({ message: 'No language found with that id' })
                 return;
             }
-            res.json(dbLanguageData)
+            const language = dbLanguageData.get({ plain: true })
+
+            res.render('language', {
+                language,
+                loggedIn: req.session.loggedIn
+            });
         })
         .catch(err => {
             console.log(err);
