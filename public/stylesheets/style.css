@@ -25,7 +25,7 @@
     color: var(--primary-color);
 }
 
-/* Body Classes */
+/* Section Classes */
 
 .section-text {
     max-width: 500px;
@@ -34,17 +34,93 @@
     padding: 80px 16px 0 16px;
 }
 
-.dashboard-content {
+.header-section {
+    position: relative;
+    height: 120px;
+}
+
+.main-header {
+    height: 250px;
+}
+
+.page-header-banner{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: var(--orange-accent);
+}
+
+/* DashboardPage - Classes */
+
+.page-content {
     max-width: 1440px;
 }
 
-/* Main Page */
+/* Comments CSS */
 
-.page-header-banner{
+.comment-content .mdl-card__supporting-text {
+    width: 100%;
+    padding: 16px;
+    min-height: 64px;
     display: flex;
-    background-color: var(--orange-accent);
-    justify-content: center;
+    align-items: center;
+  }
+
+.comment-content .comments {
+    background-color: #EEE;
 }
+.comment-content .meta > * {
+align-items: center;
+}
+.comment-content .meta + .mdl-card__supporting-text {
+border: 0;
+display: flex;
+flex-direction: column;
+}
+.comment-content .meta + .mdl-card__supporting-text p {
+max-width: 512px;
+margin: 16px auto;
+font-size: 16px;
+line-height: 28px;
+}
+
+.comment-content .comments {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: stretch;
+padding: 32px;
+box-sizing: border-box;
+}
+.comment-content .comments > form {
+display: flex;
+flex-direction: row;
+margin-bottom: 16px;
+}
+.comment-content .comments > form .mdl-textfield {
+flex-grow: 1;
+margin-right: 16px;
+color: rgb(97, 97, 97);
+}
+/* Workaround for Firefox.
+* User agent stylesheet kept overwriting the font in FF only.
+*/
+.comment-content .comments > form .mdl-textfield .mdl-textfield__input {
+font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+.comment-content .comments > form .mdl-textfield input,
+.comment-content .comments > form .mdl-textfield textarea {
+resize: none;
+}
+.comment-content .comments > form button {
+margin-top: 20px;
+background-color: rgba(254,140,79, 0.75);
+color: white;
+}
+
+/* Main Page */
 
 .language-section{
     text-align: center;
@@ -55,7 +131,7 @@
     justify-content: center;
 }
 
-.mdl-card {
+/* .mdl-card {
     display: flex;
     justify-content: center;
     position: relative;
@@ -65,8 +141,15 @@
 .mdl-card h2 {
     position:absolute;
     bottom: 25px;
-}
+} */
 
 footer{
     margin-top: 60px;
+}
+
+/* Components */
+
+.mdl-chip {
+    border-radius: 4px;
+    margin-left: 5px;
 }
