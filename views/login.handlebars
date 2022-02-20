@@ -1,31 +1,51 @@
-{{!-- login form --}}
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login"/>
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login"/>
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
-{{!-- sign up form. Only email and password required--}}
-<form class="signup-form">
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup"/>
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+
+
+<section class="header-section">
+    <div class="page-header-banner">
+        <div class="page-header-banner__title">
+            <div class="banner-text mdl-typography--display-2 mdl-typography--font-thin">Welcome</div>
+        </div> 
+    </div>
+</section>
+
+<div class="forms-container">
+  {{!-- login form --}}
+  <form class="login-form">
+    <h2 class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Log In</h2>
+    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">
+      <div>
+        <label for="email-login">email:</label>
+        <input type="text" id="email-login"/>
+      </div>
+      <div>
+        <label for="password-login">password:</label>
+        <input type="password" id="password-login"/>
+      </div>
+      <div>
+        <button type="submit">login</button>
+      </div>
+    </div>
+  </form>
+  {{!-- sign up form. Only email and password required--}}
+  <form class="signup-form">
+    <h2 class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Sign Up</h2>
+    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">
+      <div>
+        <label for="email-signup">email:</label>
+        <input type="text" id="email-signup" />
+      </div>
+      <div>
+        <label for="password-signup">password:</label>
+        <input type="password" id="password-signup"/>
+      </div>
+      <div>
+        <button type="submit">signup</button>
+      </div>
+    </div>
+  </form>
+</div>
 
 {{!-- link to js file for functionality --}}
 <script src="/javascript/login.js"></script>
+{{!-- link to unique styles sheet --}}
+<link rel="stylesheet" href="/stylesheets/login-page.css" />

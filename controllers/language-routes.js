@@ -5,7 +5,7 @@ const { Language, Comment, User } = require('../models');
 // get all languages
 router.get('/', (req, res) => {
     Language.findAll({
-        attributes: ['name']
+        attributes: ['name', 'icon_data']
     })
         .then(dbLanguageData => res.json(dbLanguageData))
         .catch(err => {
@@ -14,10 +14,10 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:name', (req, res) => {
     Language.findOne({
         where: {
-            id: req.params.id
+            name: req.params.name
         },
         attributes: [
             'id',
@@ -30,7 +30,8 @@ router.get('/:id', (req, res) => {
             'filename_extension',
             'language_type',
             'major_organizations',
-            'licensed_under'
+            'licensed_under',
+            'icon_data'
         ],
         include: [
             {
@@ -48,7 +49,12 @@ router.get('/:id', (req, res) => {
                 res.status(404).json({ message: 'No language found with that id' })
                 return;
             }
-            res.json(dbLanguageData)
+            const language = dbLanguageData.get({ plain: true })
+
+            res.render('language', {
+                language,
+                loggedIn: req.session.loggedIn
+            });
         })
         .catch(err => {
             console.log(err);
