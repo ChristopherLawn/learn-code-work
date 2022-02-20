@@ -5,7 +5,7 @@ const { Language, Comment, User } = require('../models');
 // get all languages
 router.get('/', (req, res) => {
     Language.findAll({
-        attributes: ['name']
+        attributes: ['name', 'icon_data']
     })
         .then(dbLanguageData => res.json(dbLanguageData))
         .catch(err => {
@@ -30,7 +30,8 @@ router.get('/:name', (req, res) => {
             'filename_extension',
             'language_type',
             'major_organizations',
-            'licensed_under'
+            'licensed_under',
+            'icon_data'
         ],
         include: [
             {
