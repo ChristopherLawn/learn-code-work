@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const seedLanguages = require('./languageData');
+const seedLanguages = require('./seedLanguages');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
