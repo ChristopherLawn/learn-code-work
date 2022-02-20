@@ -131,6 +131,10 @@ color: white;
     justify-content: center;
 }
 
+.fa-brands {
+    color: var(--primary-color)
+}
+
 /* .mdl-card {
     display: flex;
     justify-content: center;
