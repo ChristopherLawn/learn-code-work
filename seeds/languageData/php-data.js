@@ -2,6 +2,7 @@ const phpData =
 {
     name: 'PHP',
     website: 'https://www.php.net/',
+    icon_data: 'fa-brands fa-php',
     version_number: '8.1.3',
     year_created: 1995,
     developed_by: 'Rasmus Lerdorf',

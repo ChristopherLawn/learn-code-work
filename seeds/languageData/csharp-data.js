@@ -2,6 +2,7 @@ const csharpData =
 {
     name: 'C#',
     website: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
+    icon_data: 'fa-brands fa-js-square',
     version_number: '10.0',
     year_created: 2000,
     developed_by: 'Anders Hejlsberg',

@@ -2,6 +2,7 @@ const perlData =
 {
     name: 'Perl',
     website: 'https://www.perl.org/',
+    icon_data: 'fa-brands fa-js-square',
     version_number: '5.34.0',
     year_created: 1988,
     developed_by: 'Larry Wall',

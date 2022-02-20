@@ -2,6 +2,7 @@ const nodeData =
 {
     name: 'Node.js',
     website: 'https://nodejs.org/en/',
+    icon_data: 'fa-brands fa-node-js',
     version_number: '17.5.0',
     year_created: 2009,
     developed_by: 'Ryan Dahl',
