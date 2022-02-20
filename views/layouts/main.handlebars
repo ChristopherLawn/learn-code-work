@@ -26,7 +26,7 @@
                 <!-- Navigation -->
                 <nav class="mdl-navigation">
                     {{#if loggedIn}}
-                    <a class="mdl-navigation__link" href="">Logout</a>
+                    <a id="logout" class="mdl-navigation__link" href="">Logout</a>
                     {{else}}
                     <a class="mdl-navigation__link mdl-typography--font-light mdl-typography" href="/login">LOGIN</a>
                     {{/if}}         
@@ -44,6 +44,9 @@
       </div>
     </footer>
   </div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
