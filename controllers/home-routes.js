@@ -6,7 +6,8 @@ router.get('/', (req, res) => {
   Language.findAll({
     attributes: [
       'name',
-      'language_type'
+      'language_type',
+      'icon_data'
     ]
 })
   .then(dbLanguageData => {

@@ -2,6 +2,7 @@ const javaData =
 {
     name: 'Java',
     website: 'https://www.oracle.com/java/',
+    icon_data: 'fa-brands fa-java',
     version_number: 'Java SE 17',
     year_created: 1995,
     developed_by: 'James Gosling',

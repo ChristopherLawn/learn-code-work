@@ -38,6 +38,9 @@ const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+//handlebar helpers
+var helpers = require('handlebars-helpers')();
+
 // Turn on routes
 app.use(routes);
 

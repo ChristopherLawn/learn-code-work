@@ -2,6 +2,7 @@ const pythonData =
 {
     name: 'Python',
     website: 'https://www.python.org/',
+    icon_data: 'fa-brands fa-python',
     version_number: '3.10.2',
     year_created: 1991,
     developed_by: '	Guido van Rossum',
