@@ -1,33 +1,3 @@
-<!---<section>
-    <h1>Scripting Languages</h1>
-    <ol class="module-cards-list">
-        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
-        {{#each scriptingModules as |scriptingModule|}}
-        <li>
-            {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> module-card scriptingModule}}
-        </li> 
-        {{/each}}
-    </ol>
-</section>
-
-<section>
-    <h1>Programming Languages</h1>
-    <ol class="module-cards-list">
-        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
-        {{#each programmingModules as |programmingModule|}}
-        <li>
-            {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> module-card programmingModule}}
-        </li> 
-        {{/each}}
-    </ol>
-</section> --->
-
-{{!-- banner/"hero" --}}
-{{!-- <div class="page-header-banner">
-    <img src="/images/placeholder-image-person-jpg.jpeg" alt="" width="200">
-</div> --}}
 <section class="main-header header-section">
     <div class="page-header-banner">
         <img src="/images/placeholder-image-person-jpg.jpeg" alt="" width="200">
@@ -38,32 +8,14 @@
     <div class="section-text">
         <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Scripting Languages</div>
     </div>
-    <ol class="mdl-grid module-cards-list">
-
+    <div class="mdl-grid module-cards-list">
+ 
         {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
-        {{#each scriptingModules as |scriptingModule|}}
+        {{#each languages as |languages|}}
             {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> module-card scriptingModule}}
+            {{> module-card languages}}
         {{/each}}
-
-        {{!-- testing card handlerbars file --}}
-        {{> module-card}}
-
-        {{!-- testing with hardcoded element --}}
-        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
-            <i class="fab fa-css3 fa-6x"></i>
-                <h2 class="mdl-card__title-text">CSS</h2>
-        </li>
-        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
-            <i class="fab fa-css3 fa-6x"></i>
-                <h2 class="mdl-card__title-text">Javascript</h2>
-        </li>
-        <li class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-grid">
-            <i class="fab fa-css3 fa-6x"></i>
-                <h2 class="mdl-card__title-text">React</h2>
-        </li>
-
-    </ol>
+    </div>
 </section>
 
 <section class="language-section">
