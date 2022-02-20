@@ -30,7 +30,7 @@ Language.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [1]
+                len: [2]
             }
         },
         website: {
@@ -41,7 +41,7 @@ Language.init(
             }
         },
         description: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false
         },
         developed_by: {

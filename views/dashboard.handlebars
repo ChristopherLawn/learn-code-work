@@ -1,80 +1,64 @@
-<main class="mdl-layout__content mdl-color--grey-100">
-    <div class="mdl-grid demo-content">
-        <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-            <use xlink:href="#piechart" mask="url(#piemask)" />
-            <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan font-size="0.2" dy="-0.07">%</tspan></text>
-        </svg>
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-            <use xlink:href="#piechart" mask="url(#piemask)" />
-            <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-        </svg>
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-            <use xlink:href="#piechart" mask="url(#piemask)" />
-            <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-        </svg>
-        <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-            <use xlink:href="#piechart" mask="url(#piemask)" />
-            <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
-        </svg>
-        </div>
-        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-        </svg>
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-        </svg>
-        </div>
-        <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-        <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-            <h2 class="mdl-card__title-text">Updates</h2>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-            Non dolore elit adipisicing ea reprehenderit consectetur culpa.
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-            </div>
-        </div>
-        <div class="demo-separator mdl-cell--1-col"></div>
-        <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-            <h3>View options</h3>
-            <ul>
-                <li>
-                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Click per object</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Views per object</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Objects selected</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Objects viewed</span>
-                </label>
-                </li>
-            </ul>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">Change location</a>
-            <div class="mdl-layout-spacer"></div>
-            <i class="material-icons">location_on</i>
-            </div>
-        </div>
-        </div>
+<section class="header-section">
+    <div class="page-header-banner">
+        <div class="page-header-banner__title">
+            <div class="banner-text mdl-typography--display-2 mdl-typography--font-thin">Hello Admin</div>
+        </div> 
     </div>
-</main>
+</section>
+
+<form class="add-language-form">
+
+    <h2 class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Add A Language Module</h2>
+    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">
+        {{!-- form questions --}}
+      <div>
+        <label for="name">Name Of Language: </label>
+        <input type="text" id="name" placeholder="JavaScript"required/>
+      </div>
+      <div>
+        <label for="description">Description: </label>
+        <input type="text" id="description" placeholder="JavaScript is a ..."></input>
+      </div>
+      <div>
+        <label for="organizations">Major Organizations: </label>
+        <input type="text" id="organizations" placeholder="Wordpress, SoundCloud " multiple/>
+      </div>
+      <div>
+        <label for="developer">Developed By: </label>
+        <input type="text" id="developer" placeholder="Brendan Eich"/>
+      </div>
+      <div>
+        <label for="year-reated">Year Created: </label>
+        <input type="number" id="year-created" placeholder="1995"/>
+      </div>
+      <div>
+        <label for="version">Version: </label>
+        <input type="text" id="version" placeholder="ECMAScript 2021"/>
+      </div>
+      <div>
+        <label for="ext">File Name Extension: </label>
+        <input type="text" id="ext" placeholder=".js"/>
+      </div>
+      <div>
+        <label for="license-owner">Licensed Under: </label>
+        <input type="text" id="license-owner" placeholder="GPL"/>
+      </div>
+      <div>
+        <label for="website">Website: </label>
+        <input type="text" id="website" placeholder="javascript.com"/>
+      </div>
+      <div>
+        <label for="language-type">Language Type: </label>
+        <input type="text" id="language-type" placeholder="Programming"/>
+      </div>
+      {{!-- button --}}
+      <div>
+        <button type="submit">submit</button>
+      </div>
+    </div>
+</form>
+
+{{!-- link to unique styles sheet --}}
+<link rel="stylesheet" href="/stylesheets/login-page.css" />
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+<script src="/javascript/dashboard.js"></script>
