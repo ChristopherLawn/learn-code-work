@@ -66,6 +66,10 @@ Language.init(
         licensed_under: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        icon_data: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
