@@ -1,7 +1,11 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// create new user
+// create new user  ?/signup route?
+
+
+//Make sure name is unique
+
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
