@@ -1,16 +1,18 @@
-{{!-- each comment will display user email above the comment --}}
-<div class="comments">
+{{!-- each comment will display user's username above the comment --}}
+<div class="comments mdl-color-text--grey-700">
   {{#each this}}
-
-  <section class="comment">
-    <div class="meta">
-      {{user.email}}
+  <header class="comment__header">
+    <div class="comment__author">
+      <strong>{{user.username}}</strong>
     </div>
-
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
-
+  </header>
+  <div class="comment__text">
+    {{comment_text}}
+  </div>
+  {{!-- <nav class="comment__actions">
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+      <i class="material-icons" role="presentation">thumb_up</i><span class="visuallyhidden">like comment</span>
+    </button>
+  </nav> --}}
   {{/each}}
 </div>
