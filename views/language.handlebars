@@ -1,5 +1,6 @@
 {{> language-detail language }}
 
+
 <article class="mdl-grid page-content comment-content">
     <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
@@ -14,6 +15,10 @@
                     </button>
                 </form>
             {{/if}}
+            {{> comments language.comments}}
+        </div>
+    </div>
+</article>
 
 
 {{#if loggedIn}}

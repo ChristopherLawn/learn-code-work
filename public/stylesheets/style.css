@@ -131,6 +131,10 @@ color: white;
     justify-content: center;
 }
 
+.fa-brands {
+    color: var(--primary-color)
+}
+
 /* .mdl-card {
     display: flex;
     justify-content: center;
@@ -142,12 +146,6 @@ color: white;
     position:absolute;
     bottom: 25px;
 } */
-
-footer{
-    margin-top: 60px;
-}
-
-/* Components */
 
 .mdl-chip {
     border-radius: 4px;
