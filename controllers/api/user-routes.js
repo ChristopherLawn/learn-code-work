@@ -53,6 +53,7 @@ router.post('/login', (req, res) => {
         }
 
         req.session.save(() => {
+            //if (req.body.email !== 'administrator email will go here') req.session.admin = true;
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
@@ -64,24 +65,24 @@ router.post('/login', (req, res) => {
 });
 
 //signup admin user
-// router.post('/admin', (req, res) => {
-//     User.create({
-//         username: req.body.username,
-//         email: req.body.email,
-//         password: req.body.password,
-//         is_admin: true
-//     })
-//         .then(dbUserData => {
-//             req.session.save(() => {
-//                 req.session.user_id = dbUserData.id;
-//                 req.session.username = dbUserData.username;
-//                 req.session.loggedIn = true;
-//                 req.session.is_admin = dbUserData.is_admin
+router.post('/admin', (req, res) => {
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+        is_admin: true
+    })
+        .then(dbUserData => {
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+                req.session.is_admin = dbUserData.is_admin
 
-//                 res.json(dbUserData);
-//             });
-//         })
-// });
+                res.json(dbUserData);
+            });
+        })
+});
 
 
 // logout
