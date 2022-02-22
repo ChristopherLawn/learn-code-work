@@ -32,93 +32,18 @@
             <a href="(URL or function)">Related Action</a>
         </div>
     </div>
-    <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-        </svg>
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-        </svg>
+    <div class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+        <div class="mdl-cell--1-col"></div>
+        <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+            <canvas id="langCmmtChart"></canvas>
+        </div>
     </div>
     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
         <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <canvas id="myChart"></canvas>
-        </div>
-        <div class="mdl-cell--1-col"></div>
-        <div class="mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-            <h3>View options</h3>
-            <ul>
-                <li>
-                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Click per object</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Views per object</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Objects selected</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Objects viewed</span>
-                </label>
-                </li>
-            </ul>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">Change location</a>
-            <div class="mdl-layout-spacer"></div>
-            <i class="material-icons">location_on</i>
-            </div>
+            <canvas id="pie-chart"></canvas>
         </div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        </script>
+<script src="/javascript/charts/langCmmtChart.js"></script>
+<script src="/javascript/charts/pie-chart.js"></script>
