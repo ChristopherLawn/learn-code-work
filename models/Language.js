@@ -69,7 +69,8 @@ Language.init(
         },
         icon_data: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            defaultValue: 'fa-solid fa-code'
         }
     },
     {
