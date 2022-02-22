@@ -2,6 +2,7 @@ const cData =
 {
     name: 'C',
     website: 'https://www.iso.org/standard/74528.html',
+    icon_data: 'fa-solid fa-square-c',
     version_number: 'C17',
     year_created: 1972,
     developed_by: 'Dennis Ritchie',

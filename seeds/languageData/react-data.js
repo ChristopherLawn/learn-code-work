@@ -2,6 +2,7 @@ const reactData =
 {
     name: 'React',
     website: 'https://reactjs.org/',
+    icon_data: 'fa-brands fa-react',
     version_number: '17.0.2',
     year_created: 2013,
     developed_by: 'Jordan Walke',

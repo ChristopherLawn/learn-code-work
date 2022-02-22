@@ -2,6 +2,7 @@ const swiftData =
 {
     name: 'Swift',
     website: 'https://developer.apple.com/swift/',
+    icon_data: 'fa-brands fa-swift',
     version_number: '5.5.2',
     year_created: 2014,
     developed_by: 'Chris Lattner, Doug Gregor, John McCall, Ted Kremenek, Joe Groff, and Apple Inc.',

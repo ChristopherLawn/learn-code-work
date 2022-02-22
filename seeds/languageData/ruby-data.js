@@ -2,6 +2,7 @@ const rubyData =
 {
     name: 'Ruby',
     website: 'https://www.ruby-lang.org/en/',
+    icon_data: 'fa-brands fa-gem',
     version_number: '3.1.0',
     year_created: 1995,
     developed_by: 'Yukihiro Matsumoto',

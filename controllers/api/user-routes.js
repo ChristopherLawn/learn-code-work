@@ -1,7 +1,22 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// create new user
+// get all users
+router.get('/', (req, res) => {
+    User.findAll({
+      attributes: { exclude: ['password'] }
+    })
+      .then(dbUserData => res.json(dbUserData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+// create new user  ?/signup route?
+
+//Make sure name is unique
+
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,

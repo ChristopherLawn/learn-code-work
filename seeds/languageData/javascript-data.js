@@ -2,6 +2,7 @@ const javascriptData =
 {
     name: 'JavaScript',
     website: 'https://www.ecma-international.org/publications-and-standards/standards/ecma-262/',
+    icon_data: 'fa-brands fa-js-square',
     version_number: 'ECMAScript 2021',
     year_created: 1995,
     developed_by: 'Brendan Eich',

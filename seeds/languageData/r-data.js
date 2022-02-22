@@ -2,6 +2,7 @@ const rData =
 {
     name: 'R',
     website: 'https://www.r-project.org/',
+    icon_data: 'fa-brands fa-r',
     version_number: '4.1.2',
     year_created: '1993',
     developed_by: '	Ross Ihaka and Robert Gentleman',
