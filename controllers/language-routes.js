@@ -100,9 +100,11 @@ router.post('/', (req, res) => {
 
 // Updates a language module by admin only
 router.put('/:name', (req, res) => {
+    console.log(req.body);
+    console.log(req.params.name)
     Language.update(
         {
-            name: req.body.name,
+            name: req.body.newName,
             description: req.body.description,
             major_organizations: req.body.major_organizations,
             developed_by: req.body.developed_by,
@@ -116,17 +118,12 @@ router.put('/:name', (req, res) => {
         },
         {
             where: {
-                id: req.params.name
+                name: req.params.name
             }
         }
     )
-    .then(dbUserData => {
-    // first check if that language module even exists
-    if (!dbPostData) {
-        res.status(404).json({ message: 'No language module found with this id' });
-    return;
-    }
-    res.json(dbUserData)
+    .then(dbLanguageData => {
+    res.json(dbLanguageData)
     })
     .catch(err => {
     console.log(err);
@@ -134,8 +131,8 @@ router.put('/:name', (req, res) => {
     });
 });
 
-//loads single module page to edit
-router.get('/edit-single-module/', (req, res) => {
+//finds and loads single module page to edit
+router.get('/edit-module/:name', (req, res) => {
     Language.findOne({
         where: {
             name: req.params.name
@@ -160,7 +157,10 @@ router.get('/edit-single-module/', (req, res) => {
             return;
         }
         const language = dbLanguageData.get({ plain: true })
-        res.render('edit-single-module', {language});
+        res.render('edit-language-form', {
+            language,
+            loggedIn: req.session.loggedIn
+        });
     })
 });
 
