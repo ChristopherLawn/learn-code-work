@@ -1,0 +1,14 @@
+<!-- Title -->
+<i class="fas fa-laptop-code"></i>
+<span class="mdl-layout-title"><a href="/" class="mdl-typography--font-light mdl-typography">LEARN IT</a></span>
+<!-- Add spacer, to align navigation to the right -->
+<div class="mdl-layout-spacer"></div>
+<!-- Navigation -->
+<nav class="mdl-navigation">
+    {{#if loggedIn}}
+    <a class="mdl-navigation__link" href="/dashboard">Dashboard</a>
+    <a id="logout" class="mdl-navigation__link" href="">Logout</a>
+    {{else}}
+    <a class="mdl-navigation__link mdl-typography--font-light mdl-typography" href="/login">LOGIN</a>
+    {{/if}}         
+</nav>

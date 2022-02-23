@@ -70,7 +70,7 @@ Language.init(
         icon_data: {
             type: DataTypes.STRING,
             allowNull: false,
-            defaultValue: 'fa-solid fa-binary'
+            defaultValue: 'fa-solid fa-code'
         }
     },
     {

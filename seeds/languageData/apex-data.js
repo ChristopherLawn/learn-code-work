@@ -2,7 +2,7 @@ const apexData =
 {
     name: 'Apex',
     website: 'https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro_what_is_apex.htm',
-    icon_data: 'fa-brands fa-js-square',
+    icon_data: 'fa-solid fa-code',
     version_number: '53.0',
     year_created: 2007,
     developed_by: 'Salesforce',

@@ -158,43 +158,25 @@
             </div>
         </div>
     </div>
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+      <a href="#analytic-panel" class="mdl-tabs__tab is-active">Analytics</a>
+      <a href="#add-language-panel" class="mdl-tabs__tab">Add Language Page</a>
+      <a href="#edit-language-panel" class="mdl-tabs__tab">Edit Language Page</a>
+  </div>
+
+  <div class="mdl-tabs__panel is-active" id="analytic-panel">
+    {{> analyticCards}}
+  </div>
+  <div class="mdl-tabs__panel" id="add-language-panel">
+    {{> add-language-form}}
+  </div>
+  <div class="mdl-tabs__panel" id="edit-language-panel">
+    <ul>
+      <li>Viserys</li>
+      <li>Daenerys</li>
+    </ul>
+  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        </script>
+
