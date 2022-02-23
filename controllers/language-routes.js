@@ -157,7 +157,7 @@ router.get('/edit-module/:name', (req, res) => {
             return;
         }
         const language = dbLanguageData.get({ plain: true })
-        res.render('edit-single-module', {
+        res.render('edit-language-form', {
             language,
             loggedIn: req.session.loggedIn
         });
