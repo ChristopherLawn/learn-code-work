@@ -29,6 +29,12 @@
         {{/each}}
     </div>
 </section>
+
+<section class="section--center mdl-grid center">
+  {{#each languages as |languages|}}
+    <div class="mdl-cell mdl-cell--2-col mdl-shadow--2dp mdl-color--white mdl-typography--text-center">
+      <a class="mdl-navigation__link card__link" href="/language/{{name}}">{{> module-cardV2 languages}}</a>
+    </div>   
+  {{/each}}  
+</section>
 {{!-- {{/filter}} --}}
-{{!-- link to unique styles sheet --}}
-<link rel="stylesheet" href="/stylesheets/homepage.css" />

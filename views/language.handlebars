@@ -1,6 +1,6 @@
 {{> language-detail language }}
 
-
+{{#if comment}}
 <article class="mdl-grid page-content comment-content">
     <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
@@ -19,8 +19,9 @@
         </div>
     </div>
 </article>
+{{/if}}
 
-
+<link rel="stylesheet" href="/stylesheets/comment.css" />
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
