@@ -1,48 +1,31 @@
 getData();
-
-// function dynamicColors() {
-//     var r = Math.floor(Math.random() * 255);
-//     var g = Math.floor(Math.random() * 255);
-//     var b = Math.floor(Math.random() * 255);
-//     return "rgba(" + r + "," + g + "," + b + ", 0.5)";
-// }
-
-// function poolColors(a) {
-//     var pool = [];
-//     for(i = 0; i < a; i++) {
-//         pool.push(dynamicColors());
-//     }
-//     return pool;
-// }
   
 async function getData() {
-    const response = await fetch(
-'/api/languages');
+    const response = await fetch('/api/languages');
     console.log(response);
     const data = await response.json();
     console.log('Languges Data:', data);
     length = data.length;
-    console.log(length);
 
-    labels = [];
-    values = [];
-    for (i = 0; i < length; i++) {
-        labels.push(data[i].year_created);
-        values.push(data[i].name.length);
+    const yearsObj = {}
+     for(let i = 0; i < length; i++) {
+        if(yearsObj[data[i].year_created]) {
+            yearsObj[data[i].year_created]++;
+        } else {
+            yearsObj[data[i].year_created] = 1;
+        };
     }
-    console.log(labels)
-    console.log(values)
-
+    console.log(yearsObj);
 
     new Chart(document.getElementById("pie-chart"), {
         type: 'pie',
         data: {
-            labels: labels,
+            labels: Object.keys(yearsObj),
             datasets: [
                 {
                     label: "Population (millions)",
                     backgroundColor: poolColors(values.length),
-                    data: values
+                    data: Object.values(yearsObj)
                 }
             ]
         },
@@ -54,5 +37,4 @@ async function getData() {
             }
         }
     });
-
 }

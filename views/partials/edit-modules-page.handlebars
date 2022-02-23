@@ -1,3 +1,22 @@
+<section class="page-content mdl-grid dashboard-content">
+    {{!-- card menu --}}
+    <div class="mdl-cell mdl-cell--4-col mdl-grid">
+        {{#each languages as |languages|}}
+            <div class="mdl-cell mdl-cell--4-col mdl-shadow--2dp mdl-color--white mdl-typography--text-center">
+                <a class="mdl-navigation__link card__link" href="/language/edit-module/{{name}}">{{> module-cardV2 languages}}</a>
+            </div>   
+        {{/each}} 
+    </div>
+    <div class="mdl-cell mdl-cell--8-col mdl-grid">
+
+    </div>
+</section>
+
+<script src="/javascript/charts/langCmmtChart.js"></script>
+<script src="/javascript/charts/pie-chart.js"></script>
+
+
+
 
 {{!-- {{#filter array "Scripting"}} --}}
 <section class="language-section">
