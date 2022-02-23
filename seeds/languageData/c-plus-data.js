@@ -2,7 +2,7 @@ const cPlusData =
 {
     name: 'C++',
     website: 'https://isocpp.org/',
-    icon_data: 'fa-brands fa-js-square',
+    icon_data: 'fa-solid fa-code',
     version_number: 'C++20',
     year_created: 1985,
     developed_by: 'Bjarne Stroustrup',

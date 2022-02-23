@@ -1,124 +1,30 @@
-<div class="mdl-grid dashboard-content">
-    <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-grid">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">50</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            Comments
-        </div>
+<section class="header-section">
+    <div class="page-header-banner">
+        <div class="page-header-banner__title">
+            <div class="banner-text mdl-typography--display-2 mdl-typography--font-thin">Hello Admin</div>
+        </div> 
     </div>
-    <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-grid">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">24</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            Votes
-        </div>
-    </div>
-    <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-grid">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">title Text Goes Here</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            This text might describe the photo and provide further information, such as where and
-            when it was taken.
-        </div>
-    </div>
-    <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-grid">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">title Text Goes Here</h2>
-        </div>
-        <div class="mdl-card__actions">
-            <a href="(URL or function)">Related Action</a>
-        </div>
-    </div>
-    <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-        </svg>
-        <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-        </svg>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-        <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <canvas id="myChart"></canvas>
-        </div>
-        <div class="mdl-cell--1-col"></div>
-        <div class="mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-            <h3>View options</h3>
-            <ul>
-                <li>
-                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Click per object</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Views per object</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Objects selected</span>
-                </label>
-                </li>
-                <li>
-                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Objects viewed</span>
-                </label>
-                </li>
-            </ul>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-            <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">Change location</a>
-            <div class="mdl-layout-spacer"></div>
-            <i class="material-icons">location_on</i>
-            </div>
-        </div>
-    </div>
+</section>
+
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+      <a href="#analytic-panel" class="mdl-tabs__tab is-active">Analytics</a>
+      <a href="#add-language-panel" class="mdl-tabs__tab">Add Language Page</a>
+      <a href="#edit-language-panel" class="mdl-tabs__tab">Edit Language Page</a>
+  </div>
+
+  <div class="mdl-tabs__panel is-active" id="analytic-panel">
+    {{> analyticCards}}
+  </div>
+  <div class="mdl-tabs__panel" id="add-language-panel">
+    {{> add-language-form}}
+  </div>
+  <div class="mdl-tabs__panel" id="edit-language-panel">
+    <ul>
+      <li>Viserys</li>
+      <li>Daenerys</li>
+    </ul>
+  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        </script>
+

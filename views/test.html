@@ -8,25 +8,36 @@
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        <link rel="stylesheet" href="../public/stylesheets/style.css" />
+        <!-- <link rel="stylesheet" href="../public/stylesheets/style.css" /> -->
     
         <title>Dashboard</title>
     </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-              <!-- Title -->
-                <span class="mdl-layout-title"><a href="/">Learn it - Code it - Work it</a></span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href=""/login"">LOGIN</a>
-                    <a id="logout" class="mdl-navigation__link" href="">Logout</a>
-                </nav>
-            </div>
-        </header>
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Title</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
         <main class="mdl-layout__content mdl-color--grey-100">
             <div class="mdl-grid dashboard-content">
                 <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-grid">

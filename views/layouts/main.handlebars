@@ -9,29 +9,30 @@
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-deep_orange.min.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
         <link rel="stylesheet" href="/stylesheets/style.css" />
     
         <title>LEARN IT</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     </head>
 <body>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
+  <div class="mdl-layout  mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-color--white mdl-layout__header">
             <div class="mdl-layout__header-row">
               <!-- Title -->
-                <i class="fas fa-laptop-code"></i>
-                <span class="mdl-layout-title"><a href="/" class="mdl-typography--font-light mdl-typography">LEARN IT</a></span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
-                <nav class="mdl-navigation">
-                    {{#if loggedIn}}
-                    <a class="mdl-navigation__link" href="/dashboard">Dashboard</a>
-                    <a id="logout" class="mdl-navigation__link" href="">Logout</a>
-                    {{else}}
-                    <a class="mdl-navigation__link mdl-typography--font-light mdl-typography" href="/login">LOGIN</a>
-                    {{/if}}         
-                </nav>
+              <i class="fas fa-laptop-code"></i>
+              <span class="mdl-layout-title"><a href="/" class="mdl-typography--font-light mdl-typography">LEARN IT</a></span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation -->
+              <nav class="mdl-navigation">
+                  {{#if loggedIn}}
+                  <a class="mdl-navigation__link" href="/dashboard">Dashboard</a>
+                  <a id="logout" class="mdl-navigation__link" href="">Logout</a>
+                  {{else}}
+                  <a class="mdl-navigation__link mdl-typography--font-light mdl-typography" href="/login">LOGIN</a>
+                  {{/if}}         
+              </nav>
             </div>
         </header>
     <main class="mdl-layout__content mdl-color--grey-100">
