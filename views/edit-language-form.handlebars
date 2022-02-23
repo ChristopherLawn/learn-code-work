@@ -1,0 +1,58 @@
+{{!-- EDIT FORM --}}
+<form class="edit-language-form">
+
+    <h2 class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Edit The <span>{{language.name}}</span> Language Module</h2>
+    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">
+        {{!-- form questions --}}
+      <div>
+        <label for="name">Name Of Language: </label>
+        <input type="text" id="name" placeholder="{{language.name}}" value="{{language.name}}"/>
+      </div>
+      <div>
+        <label for="description">Description: </label>
+        <input type="text" id="description" value="{{language.description}}"></input>
+      </div>
+      <div>
+        <label for="organizations">Major Organizations: </label>
+        <input type="text" id="organizations" value="{{language.major_organizations}}" multiple/>
+      </div>
+      <div>
+        <label for="developer">Developed By: </label>
+        <input type="text" id="developer" value="{{language.developed_by}}"/>
+      </div>
+      <div>
+        <label for="year-reated">Year Created: </label>
+        <input type="number" id="year-created" value="{{language.year_created}}"/>
+      </div>
+      <div>
+        <label for="version">Version: </label>
+        <input type="text" id="version" value="{{language.version_number}}"/>
+      </div>
+      <div>
+        <label for="ext">File Name Extension: </label>
+        <input type="text" id="ext" value="{{language.filename_extension}}"/>
+      </div>
+      <div>
+        <label for="license-owner">Licensed Under: </label>
+        <input type="text" id="license-owner" value="{{language.licensed_under}}"/>
+      </div>
+      <div>
+        <label for="website">Website: </label>
+        <input type="text" id="website" value="{{language.website}}"/>
+      </div>
+      <div>
+        <label for="language-type">Language Type: </label>
+        <input type="text" id="language-type" value="{{language.language_type}}"/>
+      </div>
+      <div>
+        <label for="icon-name">Icon Name: </label>
+        <input type="text" id="icon-name" value="{{language.icon_data}}"/>
+      </div>
+      {{!-- button --}}
+      <div>
+        <button type="submit">submit</button>
+      </div>
+    </div>
+</form>
+
+<script src="/javascript/edit-language-form.js"></script>

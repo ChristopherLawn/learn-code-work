@@ -30,7 +30,7 @@ router.post('/', withAuth, (req, res) => {
 });
 
 // delete comment based on ID
-router.delete('/:id', withAuth, isAdmin, (req, res) => {
+router.delete('/:id', isAdmin, (req, res) => {
     Comment.destroy({
         where: {
             id: req.params.id

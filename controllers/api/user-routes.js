@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const isAdmin = require('../../utils/auth');
 
 // get all users
-router.get('/', (req, res) => {
+router.get('/', isAdmin, (req, res) => {
     User.findAll({
       attributes: { exclude: ['password'] }
     })
@@ -18,6 +19,7 @@ router.post('/', (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
+       
     })
         .then(dbUserData => {
             req.session.save(() => {
@@ -61,7 +63,7 @@ router.post('/login', (req, res) => {
 });
 
 //signup admin user
-router.post('/admin', (req, res) => {
+router.post('/admin', isAdmin, (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.email,

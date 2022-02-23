@@ -11,9 +11,10 @@ async function addLanFormHandler(event) {
     const licensed_under = document.querySelector('#license-owner').value.trim();
     const website = document.querySelector('#website').value.trim();
     const language_type = document.querySelector('#language-type').value.trim();
-  
-  if (name && description && major_organizations && developed_by && year_created && version_number && filename_extension && licensed_under && website && language_type) {
-    const response = await fetch('/languages', {
+    const icon_name = document.querySelector('#icon-name').value.trim();
+    console.log("i was herreeeeeee");
+  if (name && description && major_organizations && developed_by && year_created && version_number && filename_extension && licensed_under && website && language_type && icon_name) {
+    const response = await fetch('languages', {
       method: 'post',
       body: JSON.stringify({
         name,
@@ -25,13 +26,15 @@ async function addLanFormHandler(event) {
         filename_extension,
         licensed_under,
         website,
-        language_type
+        language_type,
+        icon_name
       }),
       headers: { 'Content-Type': 'application/json' }
     });
       // check the response status
       if (response.ok) {
-          console.log('success');
+          alert(`successfully added ${name}`);
+          document.location.replace('/');
       } else {
           alert(response.statusText);
       }
