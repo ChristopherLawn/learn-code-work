@@ -11,9 +11,7 @@
 /* Header Classes */
 
 .mdl-layout__header {
-    background-color:white;
     border-bottom: 3px solid var(--primary-color);
-    color: var(--primary-color);
 }
 
 .mdl-layout-title a {
