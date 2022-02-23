@@ -12,7 +12,7 @@ async function addLanFormHandler(event) {
     const website = document.querySelector('#website').value.trim();
     const language_type = document.querySelector('#language-type').value.trim();
     const icon_name = document.querySelector('#icon-name').value.trim();
-    console.log(icon_name);
+    console.log("i was herreeeeeee");
   if (name && description && major_organizations && developed_by && year_created && version_number && filename_extension && licensed_under && website && language_type && icon_name) {
     const response = await fetch('languages', {
       method: 'post',
