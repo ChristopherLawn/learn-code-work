@@ -1,7 +1,9 @@
 async function addLanFormHandler(event) {
     event.preventDefault();
 
-    const name = document.querySelector('#name').value.trim();
+    const oldName = document.querySelector('#name').placeholder.trim();
+
+    const newName = document.querySelector('#name').value.trim();
     const description = document.querySelector('#description').value.trim();
     const major_organizations = document.querySelector('#organizations').value.trim();
     const developed_by = document.querySelector('#developer').value.trim();
@@ -12,14 +14,14 @@ async function addLanFormHandler(event) {
     const website = document.querySelector('#website').value.trim();
     const language_type = document.querySelector('#language-type').value.trim();
     const icon_name = document.querySelector('#icon-name').value.trim();
-    //gets id
-    const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
-
-  if (name && description && major_organizations && developed_by && year_created && version_number && filename_extension && licensed_under && website && language_type && icon_name) {
-    const response = await fetch(`/languages/${id}`, {
+    console.log(oldName);
+    console.log(newName);
+    console.log('heeeeeereeeeeeffdgddddddddee');
+  if (newName && description && major_organizations && developed_by && year_created && version_number && filename_extension && licensed_under && website && language_type && icon_name) {
+    const response = await fetch(`/languages/${oldName}`, {
       method: 'PUT',
       body: JSON.stringify({
-        name,
+        newName,
         description,
         major_organizations,
         developed_by,
@@ -35,7 +37,7 @@ async function addLanFormHandler(event) {
     });
       // check the response status
       if (response.ok) {
-          alert(`successfully edited ${name}`);
+          alert(`successfully edited ${oldName}`);
           document.location.replace('/');
       } else {
           alert(response.statusText);

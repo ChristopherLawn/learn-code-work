@@ -12,6 +12,7 @@ router.get('/', withAuth, (req, res) => {
     })
 });
 
+// loads the edit modules page
 router.get('/edit-modules-page', withAuth, (req, res) => {
     Language.findAll({
         attributes: [
