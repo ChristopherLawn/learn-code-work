@@ -17,4 +17,5 @@ const isAdmin = (req, res, next) => {
     }
 };
 
-module.exports = {withAuth, isAdmin}
+module.exports = withAuth, isAdmin;
+
