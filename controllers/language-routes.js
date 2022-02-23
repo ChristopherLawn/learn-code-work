@@ -62,6 +62,39 @@ router.get('/:name', (req, res) => {
         });
 });
 
+// create a language module route
+// expects {
+//     "name": "JavaScript",
+//     "description": "Javascript is a ",
+//     "major_organizations": "Wordpress, SoundCloud",
+//     "developed_by": "Brendan Eich",
+//     "year_created": 1995,
+//     "version_number": "ECMAScript 2021",
+//     "filename_extension": ".js",
+//     "licensed_under": "GPL",
+//     "website": "javascript.com",
+//     "language_type": "programming"
+// }
+router.post('/', (req, res) => {
+    Language.create({
+      name: req.body.name,
+      description: req.body.description,
+      major_organizations: req.body.major_organizations,
+      developed_by: req.body.developed_by,
+      year_created: req.body.year_created,
+      version_number: req.body.version_number,
+      filename_extension: req.body.filename_extension,
+      licensed_under: req.body.licensed_under,
+      website: req.body.website,
+      language_type: req.body.language_type
+    })
+      .then(dbUserData => { res.json(dbUserData) })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+});
+
 // router.get('/javascript', async (req, res) => {
 // full route 'website.com/languages/javascript'
 // res.render *handlebars view*
