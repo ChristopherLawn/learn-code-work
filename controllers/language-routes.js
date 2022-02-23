@@ -86,7 +86,8 @@ router.post('/', (req, res) => {
       filename_extension: req.body.filename_extension,
       licensed_under: req.body.licensed_under,
       website: req.body.website,
-      language_type: req.body.language_type
+      language_type: req.body.language_type,
+      icon_name: req.body.icon_name
     })
       .then(dbUserData => { res.json(dbUserData) })
       .catch(err => {
