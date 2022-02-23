@@ -135,7 +135,7 @@ router.put('/:name', (req, res) => {
 });
 
 //loads single module page to edit
-router.get('/edit-single-module/', (req, res) => {
+router.get('/edit-module/:name', (req, res) => {
     Language.findOne({
         where: {
             name: req.params.name
@@ -160,7 +160,11 @@ router.get('/edit-single-module/', (req, res) => {
             return;
         }
         const language = dbLanguageData.get({ plain: true })
-        res.render('edit-single-module', {language});
+        console.log(language)
+        res.render('edit-single-module', {
+            language,
+            loggedIn: req.session.loggedIn
+        });
     })
 });
 
