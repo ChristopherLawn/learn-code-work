@@ -12,10 +12,12 @@ async function addLanFormHandler(event) {
     const website = document.querySelector('#website').value.trim();
     const language_type = document.querySelector('#language-type').value.trim();
     const icon_name = document.querySelector('#icon-name').value.trim();
-    console.log(icon_name);
+    //gets id
+    const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
+
   if (name && description && major_organizations && developed_by && year_created && version_number && filename_extension && licensed_under && website && language_type && icon_name) {
-    const response = await fetch('languages', {
-      method: 'post',
+    const response = await fetch(`/languages/${id}`, {
+      method: 'PUT',
       body: JSON.stringify({
         name,
         description,
@@ -33,7 +35,7 @@ async function addLanFormHandler(event) {
     });
       // check the response status
       if (response.ok) {
-          alert(`successfully added ${name}`);
+          alert(`successfully edited ${name}`);
           document.location.replace('/');
       } else {
           alert(response.statusText);
@@ -41,4 +43,4 @@ async function addLanFormHandler(event) {
   }
 }
 
-document.querySelector('.add-language-form').addEventListener('submit', addLanFormHandler);
+document.querySelector('.edit-language-form').addEventListener('submit', addLanFormHandler);
