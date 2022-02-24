@@ -1,8 +1,8 @@
 getData();
-  
+
 async function getData() {
     const response = await fetch(
-'https://datausa.io/api/data?drilldowns=Nation&measures=Population');
+        'https://datausa.io/api/data?drilldowns=Nation&measures=Population');
     console.log(response);
     const data = await response.json();
     console.log(data);
@@ -27,12 +27,12 @@ async function getData() {
                 {
                     label: "Population (millions)",
                     backgroundColor: ["#3e95cd",
-                                        "#8e5ea2", 
-                                        "#3cba9f", 
-                                        "#e8c3b9", 
-                                        "#c45850",
-                                        "#CD5C5C", 
-                                        "#40E0D0"],
+                        "#8e5ea2",
+                        "#3cba9f",
+                        "#e8c3b9",
+                        "#c45850",
+                        "#CD5C5C",
+                        "#40E0D0"],
                     data: values
                 }
             ]

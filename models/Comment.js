@@ -20,17 +20,18 @@ Comment.init(
                 key: 'id'
             }
         },
-        language_name: DataTypes.STRING
-        // language_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     references: {
-        //         model: 'language',
-        //         key: 'id'
-        //     }
-        // }
+        language_name: {
+            type: DataTypes.STRING
+        },
+        language_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'language',
+                key: 'id'
+            }
+        }
     },
-    
     {
         sequelize,
         freezeTableName: true,

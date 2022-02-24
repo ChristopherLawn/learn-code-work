@@ -1,13 +1,14 @@
 {{> language-detail language }}
 
-{{#if comment}}
 <article class="mdl-grid page-content comment-content">
     <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
             {{#if loggedIn}}
                 <form class="comment-form">
+                    <input type="hidden" name="languageId" value="{{language.id}}" />
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <textarea rows=1 class="mdl-textfield__input" id="comment-body"></textarea>
+                        <textarea rows=1 class="mdl-textfield__input"
+                        name="comment-body" id="comment-body"></textarea>
                         <label for="comment-body" class="mdl-textfield__label">Join the discussion</label>
                     </div>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
@@ -19,7 +20,6 @@
         </div>
     </div>
 </article>
-{{/if}}
 
 <link rel="stylesheet" href="/stylesheets/comment.css" />
 {{#if loggedIn}}

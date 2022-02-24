@@ -1,5 +1,5 @@
 getData();
-  
+
 async function getData() {
     const response = await fetch('/api/languages');
     console.log(response);
@@ -8,8 +8,8 @@ async function getData() {
     length = data.length;
 
     const yearsObj = {}
-     for(let i = 0; i < length; i++) {
-        if(yearsObj[data[i].year_created]) {
+    for (let i = 0; i < length; i++) {
+        if (yearsObj[data[i].year_created]) {
             yearsObj[data[i].year_created]++;
         } else {
             yearsObj[data[i].year_created] = 1;

@@ -1,102 +1,84 @@
 /* Primary/Default */
-
 :root {
-    --primary-color: #4E5D66;
-    --primary-color-hover: #647783;
-    --orange-accent: #FE8C4F;
-    --green-accent: #7BAD56;
-    --blue-accent: #003459;
+  --primary-color: #4e5d66;
+  --primary-color-hover: #647783;
+  --orange-accent: #fe8c4f;
+  --green-accent: #7bad56;
+  --blue-accent: #003459;
 }
 
 /* Header Classes */
-
 .mdl-layout__header {
-    border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .mdl-card__title {
-    min-width: 75px;
+  min-width: 75px;
 }
 
 .mdl-layout-title a {
-    text-decoration: none;
-    color: var(--primary-color);
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Section Classes */
-
 .section-text {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 80px 16px 0 16px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
 }
 
 .header-section {
-    position: relative;
-    height: 120px;
+  position: relative;
+  height: 120px;
 }
 
 .main-header {
-    height: 250px;
+  height: 250px;
 }
 
-.page-header-banner{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-color: var(--orange-accent);
+.page-header-banner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: var(--orange-accent);
 }
 
 .page-header-banner__title {
-    padding: 38px 16px 0 16px;
+  padding: 38px 16px 0 16px;
 }
 
 /* DashboardPage - Classes */
-
 .page-content {
-    max-width: 1440px;
+  max-width: 1440px;
 }
 
-
-
 /* Main Page */
-
-.language-section{
-    text-align: center;
+.language-section {
+  text-align: center;
 }
 
 .module-cards-list {
-    display:flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.fa-brands, .fa-solid  {
-    color: var(--primary-color);
+.fa-brands,
+.fa-solid {
+  color: var(--primary-color);
 }
 
-.center{
-    justify-content: center;
+.center {
+  justify-content: center;
 }
-
-/* .mdl-card {
-    display: flex;
-    justify-content: center;
-    position: relative;
-
-}
-
-.mdl-card h2 {
-    position:absolute;
-    bottom: 25px;
-} */
 
 .mdl-chip {
-    border-radius: 4px;
-    margin-left: 5px;
+  border-radius: 4px;
+  margin-left: 5px;
 }
