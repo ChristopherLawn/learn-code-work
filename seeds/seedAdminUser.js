@@ -3,9 +3,9 @@ require('dotenv').config();
 
 const adminUser =
 {
-   username: ADMIN_USER,
-   email: ADMIN_EMAIL,
-   password: ADMIN_PASS,
+   username: 'Admin',
+   email: 'learn-it-admin@gmail.com',
+   password: 'learn-it-admin-1',
    is_admin: true 
 }
 
