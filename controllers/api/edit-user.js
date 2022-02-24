@@ -3,8 +3,6 @@ const { User } = require('../../models');
 const isAdmin = require('../../utils/auth');
 
 router.put('/:username', isAdmin, (req, res) => {
-    console.log(req.body.is_admin);
-    console.log(req.params.username);
     User.update({
         is_admin: true
     },
