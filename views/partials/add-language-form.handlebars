@@ -1,61 +1,66 @@
-<section class="page-content mdl-grid dashboard-content">
+<section class="page-content mdl-grid dashboard-content mdl-typography--text-center">
     <div class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
         <form class="add-language-form">
-            <div class="mdl-card__title">
+            <div class="mdl-card__title center">
                     <h2 class="mdl-card__title-text mdl-typography--font-light mdl-typography--display-1-color-contrast">Add A Language Module</h2>
             </div>
-            
             <div class="mdl-card__actions mdl-typography--font-light mdl-color-text--orange-A200">
-                {{!-- form questions --}}
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="name" placeholder="JavaScript"/>
-                    <label class="mdl-textfield__label" for="name">Name Of Language: </label>
+                <div class="mdl-grid">
+                    {{!-- form questions --}}
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name" placeholder="JavaScript"/>
+                            <label class="mdl-textfield__label" for="name">Name Of Language: </label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="description">Description: </label>
+                            <input class="mdl-textfield__input" type="text" id="description" placeholder="JavaScript is a ..."></input>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="organizations">Major Organizations: </label>
+                            <input class="mdl-textfield__input" type="text" id="organizations" placeholder="Wordpress, SoundCloud " multiple/>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="developer">Developed By: </label>
+                            <input class="mdl-textfield__input" type="text" id="developer" placeholder="Brendan Eich"/>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="year-reated">Year Created: </label>
+                            <input class="mdl-textfield__input" type="number" id="year-created" placeholder="1995"/>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="version">Version: </label>
+                            <input class="mdl-textfield__input" type="text" id="version" placeholder="ECMAScript 2021"/>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="ext">File Name Extension: </label>
+                            <input class="mdl-textfield__input" type="text" id="ext" placeholder=".js"/>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="license-owner">Licensed Under: </label>
+                            <input class="mdl-textfield__input" type="text" id="license-owner" placeholder="GPL"/>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="website">Website: </label>
+                            <input class="mdl-textfield__input" type="text" id="website" placeholder="javascript.com"/>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label class="mdl-textfield__label" for="language-type">Language Type: </label>
+                            <input class="mdl-textfield__input" type="text" id="language-type" placeholder="Programming"/>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label for="icon-name" class="mdl-textfield__label">Icon Name: </label>
+                            <input class="mdl-textfield__input" type="text" id="icon-name" placeholder="fa-solid fa-binary"/>
+                        </div>
+                    </div>
                 </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="description">Description: </label>
-                    <input class="mdl-textfield__input" type="text" id="description" placeholder="JavaScript is a ..."></input>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="organizations">Major Organizations: </label>
-                    <input class="mdl-textfield__input" type="text" id="organizations" placeholder="Wordpress, SoundCloud " multiple/>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="developer">Developed By: </label>
-                    <input class="mdl-textfield__input" type="text" id="developer" placeholder="Brendan Eich"/>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="year-reated">Year Created: </label>
-                    <input class="mdl-textfield__input" type="number" id="year-created" placeholder="1995"/>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="version">Version: </label>
-                    <input class="mdl-textfield__input" type="text" id="version" placeholder="ECMAScript 2021"/>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="ext">File Name Extension: </label>
-                    <input class="mdl-textfield__input" type="text" id="ext" placeholder=".js"/>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="license-owner">Licensed Under: </label>
-                    <input class="mdl-textfield__input" type="text" id="license-owner" placeholder="GPL"/>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="website">Website: </label>
-                    <input class="mdl-textfield__input" type="text" id="website" placeholder="javascript.com"/>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label class="mdl-textfield__label" for="language-type">Language Type: </label>
-                    <input class="mdl-textfield__input" type="text" id="language-type" placeholder="Programming"/>
-                </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <label for="icon-name" class="mdl-textfield__label">Icon Name: </label>
-                    <input class="mdl-textfield__input" type="text" id="icon-name" placeholder="fa-solid fa-binary"/>
-                </div>
+                    
                 {{!-- button --}}
-                <div>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">submit</button>
-            </div>
+                <div class="mdl-card__actions">
+                    <button class="mdl-button mdl-js-button mdl-button--raised" type="submit">submit</button>
+                </div>
             </div>
         </form>
     </div>

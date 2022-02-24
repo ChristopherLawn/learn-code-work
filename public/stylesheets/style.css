@@ -59,14 +59,13 @@
   max-width: 1440px;
 }
 
+.addAdmin-page-content {
+  max-width: 760px;
+}
+
 /* Main Page */
 .language-section {
   text-align: center;
-}
-
-.module-cards-list {
-  display: flex;
-  justify-content: center;
 }
 
 .fa-brands,
@@ -81,4 +80,8 @@
 .mdl-chip {
   border-radius: 4px;
   margin-left: 5px;
+}
+
+.mdl-button {
+  margin: 5px;
 }
