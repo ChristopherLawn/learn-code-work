@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const isAdmin = require('../../utils/auth');
 
 // create new user
 router.post('/', (req, res) => {
@@ -44,8 +45,29 @@ router.post('/login', (req, res) => {
             req.session.is_admin = dbUserData.is_admin;
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
+            
         });
     });
+});
+
+//signup admin user
+//signup admin user only admin has accesses
+router.post('/admin', isAdmin, (req, res) => {
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+        is_admin: true
+    })
+        .then(dbUserData => {
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+                req.session.is_admin = dbUserData.is_admin
+                res.json(dbUserData);
+            });
+        })
 });
 
 // logout

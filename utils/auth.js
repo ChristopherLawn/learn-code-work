@@ -6,4 +6,14 @@ const withAuth = (req, res, next) => {
     }
 };
 
-module.exports = withAuth;
+const isAdmin = (req, res, next) => {
+  
+    if (!req.session.admin) {
+        //res.redirect('/login');
+        res.json({message: 'ADMINISTRATOR'});
+    } else {
+        next();
+    }
+};
+
+module.exports = withAuth, isAdmin;
