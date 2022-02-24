@@ -1,4 +1,16 @@
 /* Comments CSS */
+.comments .comment > .comment__header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 16px;
+}
 .comment-content .mdl-card__supporting-text {
   width: 100%;
   padding: 16px;
@@ -9,20 +21,7 @@
 .comment-content .comments {
   background-color: #eee;
 }
-.comment-content .meta > * {
-  align-items: center;
-}
-.comment-content .meta + .mdl-card__supporting-text {
-  border: 0;
-  display: flex;
-  flex-direction: column;
-}
-.comment-content .meta + .mdl-card__supporting-text p {
-  max-width: 512px;
-  margin: 16px auto;
-  font-size: 16px;
-  line-height: 28px;
-}
+
 .comment-content .comments {
   display: flex;
   flex-direction: column;
@@ -31,6 +30,7 @@
   padding: 32px;
   box-sizing: border-box;
 }
+
 .comment-content .comments > form {
   display: flex;
   flex-direction: row;
@@ -55,4 +55,8 @@
   margin-top: 20px;
   background-color: rgba(254, 140, 79, 0.75);
   color: white;
+}
+
+.mdl-card {
+  min-height: 100px;
 }

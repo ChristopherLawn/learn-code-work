@@ -1,7 +1,7 @@
 <section class="header-section">
     <div class="page-header-banner">
         <div class="page-header-banner__title">
-            <div class="banner-text mdl-typography--display-2 mdl-typography--font-thin">Hello Admin</div>
+            <div class="banner-text mdl-typography--display-2 mdl-typography--font-thin">Dashboard</div>
         </div> 
     </div>
 </section>
@@ -14,6 +14,7 @@
       {{#if is_admin}}
       <a href="#add-language-panel" class="mdl-tabs__tab">Add Language Page</a>
       <a href="#edit-language-panel" class="mdl-tabs__tab">Edit Language Page</a>
+      <a href="#add-admin-user" class="mdl-tabs__tab">Add Admin User</a>
       {{/if}}
   </div>
   {{!-- Tab content pages --}}
@@ -25,5 +26,8 @@
   </div>
   <div class="mdl-tabs__panel" id="edit-language-panel">
     {{> edit-modules-page}}
+  </div>
+  <div class="mdl-tabs__panel" id="add-admin-user">
+    {{> add-admin-user}}
   </div>
 </div>
