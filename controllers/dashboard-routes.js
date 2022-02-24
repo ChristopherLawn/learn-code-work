@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const withAuth = require('../utils/auth');
 const isAdmin = require('../utils/auth');
-
+const { Language, Comment, User } = require('../models')
 
 
 
