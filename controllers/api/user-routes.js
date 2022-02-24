@@ -3,6 +3,7 @@ const { User } = require('../../models');
 const isAdmin = require('../../utils/auth');
 
 // get all users
+// Restricted get all users to only the ADMIN
 router.get('/', isAdmin, (req, res) => {
     User.findAll({
       attributes: { exclude: ['password'] }
@@ -62,7 +63,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-//signup admin user
+//signup admin user only admin has accesses
 router.post('/admin', isAdmin, (req, res) => {
     User.create({
         username: req.body.username,

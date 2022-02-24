@@ -29,7 +29,8 @@ router.post('/', withAuth, (req, res) => {
     }
 });
 
-// delete comment based on ID
+// delete comment based on ID 
+//Added only the ADMIN can do this
 router.delete('/:id', isAdmin, (req, res) => {
     Comment.destroy({
         where: {
