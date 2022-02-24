@@ -45,6 +45,7 @@ router.post('/login', (req, res) => {
             req.session.is_admin = dbUserData.is_admin;
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
+            
         });
     });
 });

@@ -11,8 +11,10 @@
   {{!-- Tab Menu  --}}
   <div class="mdl-tabs__tab-bar">
       <a href="#analytic-panel" class="mdl-tabs__tab is-active">Analytics</a>
+      {{#if is_admin}}
       <a href="#add-language-panel" class="mdl-tabs__tab">Add Language Page</a>
       <a href="#edit-language-panel" class="mdl-tabs__tab">Edit Language Page</a>
+      {{/if}}
   </div>
   {{!-- Tab content pages --}}
   <div class="mdl-tabs__panel is-active" id="analytic-panel">
