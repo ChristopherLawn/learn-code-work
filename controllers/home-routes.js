@@ -9,18 +9,18 @@ router.get('/', (req, res) => {
       'language_type',
       'icon_data'
     ]
-})
-  .then(dbLanguageData => {
-    const languages = dbLanguageData.map(language => language.get({ plain: true}));
-    res.render('homepage', {
-      languages,
-      loggedIn: req.session.loggedIn
-    });
   })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    .then(dbLanguageData => {
+      const languages = dbLanguageData.map(language => language.get({ plain: true }));
+      res.render('homepage', {
+        languages,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 router.get('/login', (req, res) => {

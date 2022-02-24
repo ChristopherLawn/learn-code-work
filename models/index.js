@@ -11,6 +11,6 @@ Comment.belongsTo(User, {
 Language.hasMany(Comment, {
     foreignKey: 'language_id',
     onDelete: 'CASCADE'
-})
+});
 
 module.exports = { User, Comment, Language };

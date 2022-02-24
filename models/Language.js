@@ -62,7 +62,7 @@ Language.init(
         major_organizations: {
             type: DataTypes.STRING,
             allowNull: true
-        }, 
+        },
         licensed_under: {
             type: DataTypes.STRING,
             allowNull: true

@@ -7,7 +7,7 @@ function dynamicColors() {
 
 function poolColors(a) {
     var pool = [];
-    for(i = 0; i < a; i++) {
+    for (i = 0; i < a; i++) {
         pool.push(dynamicColors());
     }
     return pool;

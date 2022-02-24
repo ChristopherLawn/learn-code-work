@@ -9,15 +9,15 @@ function dynamicColors() {
 
 function poolColors(a) {
     var pool = [];
-    for(i = 0; i < a; i++) {
+    for (i = 0; i < a; i++) {
         pool.push(dynamicColors());
     }
     return pool;
 }
-  
+
 async function getData() {
     const response = await fetch(
-'/api/languages');
+        '/api/languages');
     console.log(response);
     const data = await response.json();
     console.log('Languges Data:', data);
@@ -32,7 +32,6 @@ async function getData() {
     }
     console.log(labels)
     console.log(values)
-
 
     new Chart(document.getElementById("langCmmtChart"), {
         type: 'bar',
@@ -54,5 +53,4 @@ async function getData() {
             }
         }
     });
-
 }
