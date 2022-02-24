@@ -9,8 +9,8 @@ const session = require('express-session');
 require('dotenv').config();
 
 // Port info
-const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
 
 // Session creation
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -43,5 +43,7 @@ app.use(routes);
 
 // Turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
 });
