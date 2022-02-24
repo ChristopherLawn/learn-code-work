@@ -7,7 +7,7 @@ const { Language, Comment, User } = require('../models')
 
 
 //create a withAuth type function that checks sessions and see if the user is admin
-router.get('/', withAuth, (req, res) => {
+router.get('/', withAuth, isAdmin, (req, res) => {
     Language.findAll({
         attributes: [
             'id',
@@ -38,8 +38,8 @@ router.get('/', withAuth, (req, res) => {
         const languages = dbLanguageData.map(language => language.get({ plain: true}));
         res.render('dashboard', {
             loggedIn: req.session.loggedIn,
-            languages
-           //  is_admin: req.session.is_admin
+            languages,
+            //is_admin: req.session.is_admin
         })
     })
     .catch(err => {
