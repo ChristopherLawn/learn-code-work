@@ -2,12 +2,12 @@ async function deleteBtnHandler(event) {
     event.preventDefault();
   
     const oldName = document.querySelector('#name').placeholder.trim();
-    const response = await fetch(`/api/languages/${oldName}`, {
+    const response = await fetch(`/api/delete/${oldName}`, {
         method: 'DELETE'
     });
     // check the response status
     if (response.ok) {
-        alert(`successfully edited ${oldName}`);
+        alert(`successfully DELETED ${oldName}`);
         document.location.replace('/');
     } else {
         alert(response.statusText);
