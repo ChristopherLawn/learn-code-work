@@ -4,37 +4,17 @@
     </div>
 </section>
 {{!-- {{#filter array "Scripting"}} --}}
-<section class="language-section">
-    <div class="section-text">
-        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Scripting Languages</div>
-    </div>
-    <div class="mdl-grid module-cards-list">
-        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
-        {{#each languages as |languages|}}
-            {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> module-card languages}}
-        {{/each}}
-    </div>
-</section>
-{{!-- {{else}} --}}
-<section class="language-section">
-    <div class="section-text">
-        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Programming Languages</div>
-    </div>
-    <div class="mdl-grid module-cards-list">
-        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
-        {{#each programmingModules as |programmingModule|}}
-            {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> module-card programmingModule}}
-        {{/each}}
-    </div>
-</section>
-
 <section class="section--center mdl-grid center">
   {{#each languages as |languages|}}
     <div class="mdl-cell mdl-cell--2-col mdl-shadow--2dp mdl-color--white mdl-typography--text-center">
-      <a class="mdl-navigation__link card__link" href="/language/{{name}}">{{> module-cardV2 languages}}</a>
+      <a class="mdl-navigation__link card__link" href="/language/{{name}}">{{> module-card languages}}</a>
     </div>   
   {{/each}}  
 </section>
+{{!-- {{else}} --}}
+{{!-- <section class="language-section">
+    <div class="section-text">
+        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Programming Languages</div>
+    </div>
+</section> --}}
 {{!-- {{/filter}} --}}

@@ -1,43 +1,13 @@
 <section class="page-content mdl-grid dashboard-content">
     {{!-- card menu --}}
-    <div class="mdl-cell mdl-cell--4-col mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-grid">
         {{#each languages as |languages|}}
-            <div class="mdl-cell mdl-cell--4-col mdl-shadow--2dp mdl-color--white mdl-typography--text-center">
-                <a class="mdl-navigation__link card__link" href="/language/edit-module/{{name}}">{{> module-cardV2 languages}}</a>
+            <div class="mdl-cell mdl-cell--2-col mdl-shadow--2dp mdl-color--white mdl-typography--text-center">
+                <a class="mdl-navigation__link card__link" href="/language/edit-module/{{name}}">{{> module-card languages}}</a>
             </div>   
         {{/each}} 
     </div>
     <div class="mdl-cell mdl-cell--8-col mdl-grid">
 
-    </div>
-</section>
-
-<script src="/javascript/charts/langCmmtChart.js"></script>
-<script src="/javascript/charts/pie-chart.js"></script>
-
-{{!-- {{#filter array "Scripting"}} --}}
-<section class="language-section">
-    <div class="section-text">
-        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Scripting Languages</div>
-    </div>
-    <div class="mdl-grid module-cards-list">
-        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
-        {{#each languages as |languages|}}
-            {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> edit-module-card languages}}
-        {{/each}}
-    </div>
-</section>
-{{!-- {{else}} --}}
-<section class="language-section">
-    <div class="section-text">
-        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Programming Languages</div>
-    </div>
-    <div class="mdl-grid module-cards-list">
-        {{!-- each module lesson found in the modules object will be displayed as an individual li --}}
-        {{#each programmingModules as |programmingModule|}}
-            {{!-- link to views/module-card.handlebars with a module object --}}
-            {{> edit-module-card programmingModule}}
-        {{/each}}
     </div>
 </section>
