@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+const isAdmin = require('../../utils/auth');
 
 // create new comment
 router.post('/', withAuth, (req, res) => {
@@ -21,7 +22,7 @@ router.post('/', withAuth, (req, res) => {
 });
 
 // delete comment based on ID
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', isAdmin, (req, res) => {
     Comment.destroy({
         where: {
             id: req.params.id

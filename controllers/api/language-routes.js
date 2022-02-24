@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { Language, Comment, User } = require('../../models');
+const isAdmin = require('../../utils/auth');
+
 // get all languages
 router.get('/', (req, res) => {
     Language.findAll({
