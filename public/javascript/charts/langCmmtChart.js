@@ -39,7 +39,7 @@ async function getData() {
             labels: labels,
             datasets: [
                 {
-                    label: "Population (millions)",
+                    label: "Number of Comments",
                     backgroundColor: poolColors(values.length),
                     data: values
                 }
