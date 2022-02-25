@@ -23,12 +23,6 @@
 }
 
 /* Section Classes */
-.section-text {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 80px 16px 0 16px;
-}
 
 .header-section {
   position: relative;
@@ -58,11 +52,6 @@
 
 .addAdmin-page-content {
   max-width: 760px;
-}
-
-/* Main Page */
-.language-section {
-  text-align: center;
 }
 
 .fa-brands,
