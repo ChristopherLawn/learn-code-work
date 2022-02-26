@@ -1,7 +1,7 @@
 <section class="header-section">
     <div class="page-header-banner">
         <div class="page-header-banner__title">
-            <div class="banner-text mdl-typography--display-2 mdl-typography--font-thin">Dashboard</div>
+            <div class="banner-text mdl-typography--display-1 mdl-typography--font-thin">Dashboard</div>
         </div> 
     </div>
 </section>
@@ -19,15 +19,19 @@
   </div>
   {{!-- Tab content pages --}}
   <div class="mdl-tabs__panel is-active" id="analytic-panel">
+    {{!-- Populates Analytics Cards --}}
     {{> analyticCards}}
   </div>
   <div class="mdl-tabs__panel" id="add-language-panel">
+    {{!-- Populates form to add languange module --}}
     {{> add-language-form}}
   </div>
   <div class="mdl-tabs__panel" id="edit-language-panel">
+    {{!-- populates list of language modules to edit --}}
     {{> edit-modules-page}}
   </div>
   <div class="mdl-tabs__panel" id="add-admin-user">
+    {{!-- populates form to add admin user --}}
     {{> add-admin-user}}
   </div>
 </div>

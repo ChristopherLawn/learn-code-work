@@ -1,8 +1,11 @@
+{{!-- Language Detail information section --}}
 {{> language-detail language }}
 
+{{!-- Comment section --}}
 <article class="mdl-grid page-content comment-content">
     <div class="mdl-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col">
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+            {{!-- Helperblock for showing form if only logged in --}}
             {{#if loggedIn}}
                 <form class="comment-form">
                     <input type="hidden" name="languageId" value="{{language.id}}" />
@@ -16,11 +19,12 @@
                     </button>
                 </form>
             {{/if}}
+            {{!-- Comment section associated per language --}}
             {{> comments language.comments}}
         </div>
     </div>
 </article>
-
+{{!-- custom css for comments --}}
 <link rel="stylesheet" href="/stylesheets/comment.css" />
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

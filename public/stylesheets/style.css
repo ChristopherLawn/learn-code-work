@@ -1,10 +1,7 @@
 /* Primary/Default */
 :root {
   --primary-color: #4e5d66;
-  --primary-color-hover: #647783;
   --orange-accent: #fe8c4f;
-  --green-accent: #7bad56;
-  --blue-accent: #003459;
 }
 
 /* Header Classes */
@@ -26,12 +23,6 @@
 }
 
 /* Section Classes */
-.section-text {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 80px 16px 0 16px;
-}
 
 .header-section {
   position: relative;
@@ -63,11 +54,6 @@
   max-width: 760px;
 }
 
-/* Main Page */
-.language-section {
-  text-align: center;
-}
-
 .fa-brands,
 .fa-solid {
   color: var(--primary-color);
@@ -84,4 +70,11 @@
 
 .mdl-button {
   margin: 5px;
+}
+
+@media only screen and (max-width: 575px) {
+  .mdl-tabs__tab {
+    padding: 0 10px;
+    font-size: 10px;
+  }
 }
